@@ -96,7 +96,7 @@ def load_cifar10():
 
 def generate_model(model_arch):
     if 'binput-pg' in model_arch:
-        import model.binput_resnet20_pg as m
+        import model.fracbnn_cifar10 as m
         return m.resnet20(batch_size=args.batch_size, num_gpus=torch.cuda.device_count())
     else:
         raise NotImplementedError("Model architecture is not supported.")
