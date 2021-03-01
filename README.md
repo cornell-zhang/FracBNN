@@ -2,7 +2,7 @@
 
 This repository serves as the official code release of the paper [FracBNN: Accurate and FPGA-Efficient Binary Neural Networks with Fractional Activations](https://arxiv.org/abs/2012.12206) (pubilished at FPGA 2021).
 
-FracBNN, as a binary neural network, achieves MobileNetV2-level accuracy by leveraging fractional activations. In the meantime, its input layer is binarized with minimal accuracy degradation, which improves the hardware resource efficiceny.
+FracBNN, as a binary neural network, achieves MobileNetV2-level accuracy by leveraging fractional activations. In the meantime, its input layer is binarized using a novel thermometer encoding with minimal accuracy degradation, which improves the hardware resource efficiceny.
 
 <img src="/utils/imagenet_benchmark.png" />
 
