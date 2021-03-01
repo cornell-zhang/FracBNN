@@ -53,7 +53,7 @@ numpy 1.16.4
 ### Test Only
 
 - For CIFAR-10, run ```python cifar10.py -gpu 0 -t -r /path/to/pretrained-cifar10-model.pt -d /path/to/cifar10-data```
-- For ImageNet, run ```python cifar10.py -gpu 0 -t -r /path/to/pretrained-imagenet-model.pt -d /path/to/imagenet-data```
+- For ImageNet, run ```python imagenet.py -gpu 0,1,2,3 -t -r /path/to/pretrained-imagenet-model.pt -d /path/to/imagenet-data```
 
 ### Train (Two Step Training):
 
