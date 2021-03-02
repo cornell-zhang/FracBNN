@@ -1,2 +1,8 @@
-/xcel-cifar10/* linguist-vendored
 /xcel-cifar10/* linguist-detectable=false
+/xcel-cifar10/* linguist-vendored
+*.cc linguist-detectable=false
+*.cc linguist-vendored
+*.h linguist-detectable=false
+*.h linguist-vendored
+*.tcl linguist-detectable=false
+*.tcl linguist-vendored
