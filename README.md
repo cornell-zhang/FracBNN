@@ -104,4 +104,4 @@ To deploy the bitstream:
 - Step1: Download the files and move them to ```/xcel-cifar10/deploy/```
 - Step2: Move the generated bitstream and hardware definition files to ```/xcel-cifar10/deploy/```
 - Step3: Upload the entire directory ```/xcel-cifar10/deploy/``` to the board
-- Step4: Run the notebook ```deploy/FracNet-CIFAR10.ipynb``` on the board
+- Step4: Go to ```deploy/```, run ```sudo python3 FracNet-CIFAR10.py``` on the board
