@@ -24,8 +24,8 @@ If FracBNN helps your research, please consider citing:
 |   imagenet.py (training script)
 |
 └── models/
-|       |   fracbnn_cifar10.py
-|       |   fracbnn_imagenet.py 
+|   |   fracbnn_cifar10.py
+|   |   fracbnn_imagenet.py
 |
 └───utils/
 |   |   quantization.py
@@ -74,7 +74,7 @@ Please refer to the paper for details such as hyperparameters.
 | CIFAR-10      | 1/1.4 (PG)      | Yes               | 89.1      |
 | ImageNet      | 1/1.4 (PG)      | Yes               | 71.7      |
 
-## CIFAR-10 Accelerators
+## CIFAR-10 Accelerator
 
 ### Compile the HLS code
 
@@ -105,3 +105,27 @@ To deploy the bitstream:
 - Step2: Move the generated bitstream and hardware definition files to ```/xcel-cifar10/deploy/```
 - Step3: Upload the entire directory ```/xcel-cifar10/deploy/``` to the board
 - Step4: Go to ```deploy/```, run ```sudo python3 FracNet-CIFAR10.py``` on the board
+
+## ImageNet Accelerator
+
+### Compile HLS and Generate Bitstream
+
+Please run the compilation flow using Vivado HLS. The top function is ```FracNet()``` in ```xcel-imagenet/source/bnn.cc```.
+
+### Deploy on Xilinx Ultra96v2
+
+To test the bitstream on the board, the following files (sample images, weights) are needed:
+
+- [sample image](https://drive.google.com/file/d/1eHiIOdKyyMy4cRbEs2x5wHgmUkqfzbcK/view?usp=sharing)
+- [conv1x1 weights](https://drive.google.com/file/d/1RRkMyfxURW9guPL_-YTO6e-8xW3NbYFO/view?usp=sharing)
+- [conv3x3 weights](https://drive.google.com/file/d/1baVs0SCmYQqmwgWp8ikdNAanOn4oBwQ3/view?usp=sharing)
+- [classifier bias](https://drive.google.com/file/d/10UtAz-dBPxEfElqSdfl4XaczteXmsaQj/view?usp=sharing)
+- [classifier weights](https://drive.google.com/file/d/1P_IjUzA-KOulwRkHKm-6SY8XdHCOTXVC/view?usp=sharing)
+- [batchnorm/BPReLU weights](https://drive.google.com/file/d/1m9OGR0V8MhVnxBm84nTAR75-wCFUDgCW/view?usp=sharing)
+
+To deploy the bitstream:
+
+- Step1: Download the files and move them to ```/xcel-imagenet/deploy/```
+- Step2: Move the generated bitstream and hardware definition files to ```/xcel-imagenet/deploy/```
+- Step3: Upload the entire directory ```/xcel-imagenet/deploy/``` to the board
+- Step4: Go to ```deploy/```, run ```sudo python3 FracNet-ImageNet.py``` on the board
