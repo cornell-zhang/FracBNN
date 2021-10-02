@@ -18,8 +18,7 @@ hls:
 vivado:
 	cp ./bitstream_prepare/design_1_wrapper.v ./bnn.prj/solution1/impl/ip/
 	cp ./bitstream_prepare/FracNet-CIFAR10.tcl ./bnn.prj/solution1/impl/ip/
-	cd ./bnn.prj/solution1/impl/ip/
-	vivado -mode tcl -source FracNet-CIFAR10.tcl
+	cd ./bnn.prj/solution1/impl/ip/; vivado -mode tcl -source FracNet-CIFAR10.tcl
 
 clean:
 	rm -rf bnn *.prj *.log
