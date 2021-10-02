@@ -33,6 +33,9 @@ If FracBNN helps your research, please consider citing:
 |
 └───xcel-cifar10/
 |   |   High-level synthesis code for FracBNN CIFAR-10 accelerator
+|
+└───xcel-imagenet/
+|   |   High-level synthesis code for FracBNN ImageNet accelerator
 ```
 
 ## Dependency
